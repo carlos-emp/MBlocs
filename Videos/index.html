@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Videos</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+        <link rel="stylesheet" href="./css/index.css">
+        <link rel="stylesheet" href="./fonts/style.css">
+		<!--<link rel="stylesheet" href="./css/video.css" type="text/css">-->
+		
+    </head>
+    <body>
+       
+            <div class=" text-center col-xs-12 encabezado">
+                <h4>Mostrar Videos</h4>
+            </div>
+			<!---->
+			<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+
+      <h2>Futuro <i class="fa fa-heart"></i></h2>
+      <div class="embed-responsive embed-responsive-16by9">
+	     <iframe src="https://www.youtube.com/embed/aho8tpdxq0s" class="embed-responsive-item" ></iframe>
+        <!--<iframe class="embed-responsive-item" src="//www.youtube.com/embed/ePbKGoIGAXY"></iframe>-->
+      </div>
+    </div>
+    <div class="col-sm-6">
+
+      <h2>El Futuro <i class="fa fa-heart"></i></h2>
+      <div class="embed-responsive embed-responsive-16by9">
+	     <iframe src="https://www.youtube.com/embed/aho8tpdxq0s" class="embed-responsive-item" ></iframe>
+        <!--<iframe class="embed-responsive-item" src="//www.youtube.com/embed/ePbKGoIGAXY"></iframe>-->
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!---->
+            <center>
+			 <div class="str-content" style="padding-top: 76px; padding-bottom: 80px;"">
+			    			<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Compartir</button>
+							
+							<button class="col-xs-4 col-md-2 fondoRojo">
+                        <a href="#like" role="button" class="btn colorBlanco" data-toggle="modal"><span class="glyphicons glyphicons-magnet"></span> <span class="hidden-xs">Like</span></a>
+                        </button>
+			
+							
+			 
+			   <a href="https://www.facebook.com/sharer/sharer.php?u=http://www.tuweb.com/" target="_blank"><img src="https://lh3.googleusercontent.com/-H8xMuAxM-bE/UefWwJr2vwI/AAAAAAAAEdY/N5I41q19KMk/s32-no/facebook.png"></a>
+			   
+		     </div></center>
+			 <!---->
+	 
+			 			
+<!---->
+  <center>
+  <div class="str-content" style="padding-top: 76px;padding-bottom: 80px;" >
+                     <div class="str-configuracion" style="display: block;">
+            <div class="head_configuracion"><div class="config-str"><div class="col-md-12" >
+                <div class="">
+          
+                            <div class=" fluid_container" style="width: 80%;">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+         <p>
+          <textarea id="comentario" name="comentario" placeholder=" Eccribe tu Comentaio" class="form-control" maxlength="65" ></textarea> 
+         </p>
+        <div class="col-lg-4">
+                  <input type="submit" class="btn btn-danger" value="Enviar" />
+                </div>
+        </div>
+		<br>
+		<br>
+		<br>
+		 <br>
+        <div class="panel-body">
+        <form class="form-horizontal">
+            <fieldset>
+
+                <div class="form-group">
+                <div class="contact-str">
+                    <ul class="list-contact">
+                     
+                          <li><div><span class="name"> Alynhe de la Rosa</span>
+                            <br>
+                            <span class="commit" >La nueva tecnologia</span><div></li>
+                    </ul> 
+
+                </div>
+
+
+                </div>
+
+            
+            </fieldset>
+        </form></div>
+
+    </div>
+</div>
+                            
+                              
+       </div>
+
+
+        </div>
+		</div>
+             </div>
+				</div>
+					</div>
+						</div>
+
+    </div></center>
+
+             <!----->
+			  <!----->
+             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+             <div class="modal-dialog">
+             <div class="modal-content">
+             <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="exampleModalLabel">Nuevo comentario</h4>
+               </div>
+             <div class="modal-body">
+               <form>
+              <div class="form-group">
+              <label for="recipient-name" class="control-label">Recipiente:</label>
+             <input type="text" class="form-control" id="recipient-name">
+             </div>
+            <div class="form-group">
+            <label for="message-text" class="control-label">Comentario:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+           </div>
+          </form>
+         </div>
+         <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-danger">Compartir</button>
+      </div>
+    </div>
+  </div>
+</div><!---->
+
+ <div id="like" class="modal fade centrado" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h5 class="modal-title">Like</h5>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-xs-offset-1 col-xs-7">
+                                    <div id="jRate" style="height:50px;width: 200px;"></div>
+                                </div>
+                                
+                            </div>
+
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal" aria-hidden="true">Aceptar</button>
+                            <button type="button" class="btn btn-danger" data-dismiss="modal" aria-hidden="true">Cancelar</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+ <script src="./js/bootstrap.min.js"></script>
+                        
+			
+			
+    </body>
+</html>

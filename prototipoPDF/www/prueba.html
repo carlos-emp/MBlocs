@@ -1,0 +1,163 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Prueba</title>
+        <link rel="stylesheet" href="lib/onsen/css/onsenui.css">  
+        <link rel="stylesheet" href="styles/onsen-css-components-blue-basic-theme.css">  
+        <link rel="stylesheet" href="styles/app.css"/>
+
+
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+        <link rel="stylesheet" href="./css/index.css">
+        <link rel="stylesheet" href="./fonts/style.css">
+
+
+        <script src="lib/onsen/js/angular/angular.js"></script>    
+        <script src="lib/onsen/js/onsenui.js"></script>    
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+        <script src="js/jRate.min.js"></script>
+
+
+        <script src="cordova.js"></script>
+    </head>
+    <body>
+
+        <ons-page>
+
+            <ons-list ng-controller="DialogController" class="col-xs-8">
+                <ons-list-item ng-click="show('login.html')" modifier="tappable" class="fondoAzulC colorBlanco redondeado text-center">
+<span class="icon-message"></span> Mostrar Mensajes
+
+                </ons-list-item>
+
+            </ons-list>
+        </ons-page>
+
+
+        <ons-template id="login.html">
+            <ons-dialog var="dialog" cancelable>
+
+                <ons-toolbar inline>
+                    <div class="center colorBlanco">
+                        Mensajes
+                    </div>
+                </ons-toolbar>
+
+                <div id="mensajes" class="barra">
+
+
+                </div>
+
+            </ons-dialog> 
+        </ons-template>
+        <script>
+
+            $(document).ready(get_mensajes("#mensajes"));
+            $("#comentar").click(get_mensajes("#mensajes-min"));
+            function get_mensajes(id){
+                var mensajes="";
+                mensajes+=" <div class='row margen-sup-min'>";
+                mensajes+="<div class='col-xs-2 '>";
+                mensajes+="<div class='circulo fondoAzulC'><span class='icon-person'></span></div>";
+                mensajes+="</div>";
+                mensajes+="<div class='col-xs-9'>";
+                mensajes+="<div class='fondoGris redondeado mensaje'>";
+                mensajes+="<b>Carlos Vázquez</b><br>";
+                mensajes+="Muy buena información.</div> </div></div> ";
+
+
+                mensajes+=" <div class='row margen-sup-min'>";
+                mensajes+="<div class='col-xs-2 '>";
+                mensajes+="<div class='circulo fondoAzulC'><span class='icon-person'></span></div>";
+                mensajes+="</div>";
+                mensajes+="<div class='col-xs-9'>";
+                mensajes+="<div class='fondoGris redondeado mensaje'>";
+                mensajes+="<b>Araceli de la Rosa</b><br>";
+                mensajes+="Muy buena información.</div> </div></div> ";
+
+
+                mensajes+=" <div class='row margen-sup-min'>";
+                mensajes+="<div class='col-xs-2 '>";
+                mensajes+="<div class='circulo fondoAzulC'><span class='icon-person'></span></div>";
+                mensajes+="</div>";
+                mensajes+="<div class='col-xs-9'>";
+                mensajes+="<div class='fondoGris redondeado mensaje'>";
+                mensajes+="<b>Alejandro Luna</b><br>";
+                mensajes+="Muy buena información.</div> </div></div> ";
+
+                mensajes+=" <div class='row margen-sup-min'>";
+                mensajes+="<div class='col-xs-2 '>";
+                mensajes+="<div class='circulo fondoAzulC'><span class='icon-person'></span></div>";
+                mensajes+="</div>";
+                mensajes+="<div class='col-xs-9'>";
+                mensajes+="<div class='fondoGris redondeado mensaje'>";
+                mensajes+="<b>Carlos Vázquez</b><br>";
+                mensajes+="Muy buena información.</div> </div></div> ";
+
+                mensajes+=" <div class='row margen-sup-min'>";
+                mensajes+="<div class='col-xs-2 '>";
+                mensajes+="<div class='circulo fondoAzulC'><span class='icon-person'></span></div>";
+                mensajes+="</div>";
+                mensajes+="<div class='col-xs-9'>";
+                mensajes+="<div class='fondoGris redondeado mensaje'>";
+                mensajes+="<b>Carlos Vázquez</b><br>";
+                mensajes+="Muy buena información.</div> </div></div> ";
+
+                mensajes+=" <div class='row margen-sup-min'>";
+                mensajes+="<div class='col-xs-2 '>";
+                mensajes+="<div class='circulo fondoAzulC'><span class='icon-person'></span></div>";
+                mensajes+="</div>";
+                mensajes+="<div class='col-xs-9'>";
+                mensajes+="<div class='fondoGris redondeado mensaje'>";
+                mensajes+="<b>Carlos Vázquez</b><br>";
+                mensajes+="Muy buena información.</div> </div></div> ";
+
+                mensajes+=" <div class='row margen-sup-min'>";
+                mensajes+="<div class='col-xs-2 '>";
+                mensajes+="<div class='circulo fondoAzulC'><span class='icon-person'></span></div>";
+                mensajes+="</div>";
+                mensajes+="<div class='col-xs-9'>";
+                mensajes+="<div class='fondoGris redondeado mensaje'>";
+                mensajes+="<b>Carlos Vázquez</b><br>";
+                mensajes+="Muy buena información.</div> </div></div> ";
+
+                $(id).append(mensajes);
+            }
+        </script>
+
+
+
+        <script>
+            ons.bootstrap()
+
+                .controller('DialogController', function($scope) {
+                $scope.dialogs = {};
+
+                $scope.show = function(dlg) {
+                    if (!$scope.dialogs[dlg]) {
+                        ons.createDialog(dlg).then(function(dialog) {
+                            $scope.dialogs[dlg] = dialog;
+                            dialog.show();
+                        });
+                    }
+                    else {
+                        $scope.dialogs[dlg].show();
+                    }
+                }
+            });
+
+
+        </script>
+
+    </body>
+</html>
+
+
+
+

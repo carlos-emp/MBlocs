@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Visor de PDF</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+        <link rel="stylesheet" href="./css/index.css">
+        <link rel="stylesheet" href="./fonts/style.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+        <script src="js/jRate.min.js"></script>
+
+        <script type="text/javascript">
+            $(function () {
+                var that = this;
+                var toolitup = $("#jRate").jRate({
+                    rating: 1,
+                    startColor: 'orange',
+                    endColor: 'yellow',
+                    strokeColor: 'black',
+                    width: 30,
+                    height: 30,
+                    precision: 0.5,
+                    minSelected: 1,
+                    onChange: function(rating) {
+                        console.log("OnChange: Rating: "+rating);
+                    },
+                    onSet: function(rating) {
+                        console.log("OnSet: Rating: "+rating);
+                    }
+                });
+
+                $('#btn-click').on('click', function() {
+                    toolitup.setRating(0);				
+                });
+
+            });
+        </script>
+
+    </head>
+    <body>
+
+
+
+
+        <div class=" text-center col-xs-12 encabezado">
+            <h4>Visor de PDF</h4>
+        </div>
+
+        <div class="floatcontainerleft">
+
+            <div class="col-xs-3 col-xs-1-offset fixed" id="clic">
+                <div class="circulo fondoAzulC colorBlanco  bordeBlanco" >+</div>
+            </div>
+        </div>
+        
+        
+                    <div class="menu fixed fondoAzulC boton" onclick="goFullscreen('frame');">
+                        <div class="col-xs-2" >
+                            <div class="circulo fondoBlanco"><span class="icon-enlarge colorNegro"></span></div>
+                        </div>
+                        <div class="col-xs-10 fila colorBlanco">
+                            <b> Pantalla Completa</b>
+                        </div>
+                        <div class="col-xs-2 ">
+                            <div class="circulo fondoBlanco "><span class="icon-share colorNegro"></span></div>
+                        </div>
+                        <div class="col-xs-10 fila colorBlanco">
+                            <b>Compartir</b>
+                        </div>
+                    </div>
+        <div class="container-fluid">
+
+
+            
+                
+              
+          
+            <!-- Trigger the modal with a button -->
+
+
+            <!-- Modal -->
+
+            <div class="contenido" id="resultado">
+                <!--  <object type="application/pdf" class="pdf" data="http://www.inkwelleditorial.com/pdfSample.pdf">this is not working as expected</object>-->
+
+                <div class="row" id="contenedor">
+
+
+
+                    <div class="col-xs-12 col-md-9">
+                        <iframe src="http://docs.google.com/gview?url=http://proyectgoliath.files.wordpress.com/2012/01/anonymous-el-manual.pdf&embedded=true" frameborder="0" class="pdf" id="frame" allowFullScreen></iframe>
+                    </div>
+
+                    <div class="hidden-xs hidden-sm col-md-3">
+
+                        <div class="barra" id="mensajes">
+
+                            <div class=" fixed">
+                                <div class="col-md-6 fondoAzulC">
+                                    <a href="#puntuacion" role="button" class="btn colorBlanco" data-toggle="modal"><span class="icon-star"></span> <span class="hidden-xs">Puntuar</span></a>
+                                </div>
+                                <div class="col-md-6 fondoAzulC">
+                                    <a href="#compartir" role="button" class="btn colorBlanco" data-toggle="modal"><span class="icon-share"></span> <span class="hidden-xs">Compartir</span></a>
+                                </div>
+                            </div>
+                            <div class="margen-sup"></div>
+
+
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-9">
+                                <textarea class="form-control sinBorde" name="" id=""  rows="3" placeholder="Escriba su comentario" draggable="false"></textarea>
+                            </div>
+
+                            <div class="col-xs-1">
+
+                                <button class="btn btn-primary"><span class="icon-send"></span></button>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+
+                </div>
+
+
+                <div class="row  hidden-md hidden-lg text-center" id="footer">
+                    <div class="col-xs-4 col-md-2 fondoAzulC" id="comentar">
+                        <a href="#comentarios" role="button" class="btn colorBlanco" data-toggle="modal"><span class="icon-message"></span><span class="hidden-xs"> Comentar</span></a>
+
+                    </div>
+                    <div class="col-xs-4 col-md-2 fondoAzulC">
+                        <a href="#puntuacion" role="button" class="btn colorBlanco" data-toggle="modal"><span class="icon-star"></span> <span class="hidden-xs">Puntuar</span></a>
+                    </div>
+                    <div class="col-xs-4 col-md-2 fondoAzulC">
+                        <a href="#compartir" role="button" class="btn colorBlanco" data-toggle="modal"><span class="icon-share"></span> <span class="hidden-xs">Compartir</span></a>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+
+
+            <!-- Modal Comentarios -->
+            <div id="comentarios" class="modal fade popup" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <h5 id="myModalLabel">Comentarios</h5>
+                        </div>
+                        <div class="modal-body" id="mensaje">
+
+                            <div id="mensajes-min" class="barra-min">
+
+                            </div>
+
+                        </div>
+
+
+                        <div class=" modal-footer">
+
+                            <div class="col-xs-10">
+                                <textarea class="form-control sinBorde" name="" id=""  rows="1" placeholder="Escriba su comentario" draggable="false"></textarea>
+                            </div>
+
+                            <div class="col-xs-1">
+
+                                <button class="btn btn-primary"><span class="icon-send"></span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div id="puntuacion" class="modal fade centrado" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h5 class="modal-title">Puntuar</h5>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-xs-offset-1 col-xs-7">
+                                    <div id="jRate" style="height:50px;width: 200px;"></div>
+                                </div>
+                                <div class="col-xs-2">
+                                    <button class="btn btn-primary" id="btn-click">x</button>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Aceptar</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal" aria-hidden="true">Cancelar</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+            <div id="compartir" class="modal fade centrado" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h5 class="modal-title">Compartir</h5>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    <div class="circulo fondoAzul"><span class="icon-facebook"></span></div>
+                                </div>
+
+                                <div class="col-xs-4">
+                                    <div class="circulo fondoAzulCielo"><span class="icon-twitter"></span></div>
+                                </div>
+
+                                <div class="col-xs-4">
+                                    <div class="circulo fondoRojo"><span class="icon-google"></span></div>
+                                </div>
+
+                            </div>
+
+
+
+
+                        </div>
+                        <div class="modal-footer">
+
+                            <button type="button" class="btn btn-default" data-dismiss="modal" aria-hidden="true">Cancelar</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <script src="./js/bootstrap.min.js"></script>
+        <script src="./js/pCompleta.js"></script>
+        <script src="./js/botones.js"></script>
+
+        <script>
+
+            $(document).ready(get_mensajes("#mensajes"));
+            $("#comentar").click(get_mensajes("#mensajes-min"));
+            function get_mensajes(id){
+                var mensajes="";
+                mensajes+=" <div class='row margen-sup-min'>";
+                mensajes+="<div class='col-xs-2 '>";
+                mensajes+="<div class='circulo fondoAzulC'><span class='icon-person'></span></div>";
+                mensajes+="</div>";
+                mensajes+="<div class='col-xs-9'>";
+                mensajes+="<div class='fondoGris mensaje'>";
+                mensajes+="<b>Carlos Vázquez</b><br>";
+                mensajes+="Muy buena información.</div> </div></div> ";
+
+
+                mensajes+=" <div class='row margen-sup-min'>";
+                mensajes+="<div class='col-xs-2 '>";
+                mensajes+="<div class='circulo fondoAzulC'><span class='icon-person'></span></div>";
+                mensajes+="</div>";
+                mensajes+="<div class='col-xs-9'>";
+                mensajes+="<div class='fondoGris mensaje'>";
+                mensajes+="<b>Araceli de la Rosa</b><br>";
+                mensajes+="Muy buena información.</div> </div></div> ";
+
+
+                mensajes+=" <div class='row margen-sup-min'>";
+                mensajes+="<div class='col-xs-2 '>";
+                mensajes+="<div class='circulo fondoAzulC'><span class='icon-person'></span></div>";
+                mensajes+="</div>";
+                mensajes+="<div class='col-xs-9'>";
+                mensajes+="<div class='fondoGris mensaje'>";
+                mensajes+="<b>Alejandro Luna</b><br>";
+                mensajes+="Muy buena información.</div> </div></div> ";
+
+                mensajes+=" <div class='row margen-sup-min'>";
+                mensajes+="<div class='col-xs-2 '>";
+                mensajes+="<div class='circulo fondoAzulC'><span class='icon-person'></span></div>";
+                mensajes+="</div>";
+                mensajes+="<div class='col-xs-9'>";
+                mensajes+="<div class='fondoGris mensaje'>";
+                mensajes+="<b>Carlos Vázquez</b><br>";
+                mensajes+="Muy buena información.</div> </div></div> ";
+
+                $(id).append(mensajes);
+            }
+        </script>
+
+
+
+    </body>
+</html>

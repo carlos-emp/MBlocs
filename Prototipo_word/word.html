@@ -1,0 +1,254 @@
+
+<!-- Alejandro Luna Hernández--> 
+<html lang="en" ng-app="app"> 
+<head> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" > 
+    <title>word</title> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--///////////////////////////////////////////////////////////////////////////////////////////////////
+    //
+    //      Styles
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////////////////--> 
+   
+    <link rel='stylesheet'   href='css/content.css' type='text/css' media='all'> 
+    <link rel="stylesheet" href="css/library/bootstrap.min.css" type='text/css' media='all'>
+    <link rel="stylesheet" href="css/index.css" type='text/css' media='all'>
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!--     ANgGULAR -->
+    <!-- <link rel="stylesheet" href="angular/onsen/css/onsenui.css">  
+    <link rel="stylesheet" href="angular/styles/onsen-css-components-blue-basic-theme.css">  
+    <link rel="stylesheet" href="angular/styles/app.css"/>
+    <link rel="stylesheet" href="angular/css/content_menu.css"/>-->
+
+    <script src="angular/onsen/js/angular/angular.js"></script>    
+    <script src="angular/onsen/js/onsenui.js"></script>    
+    <script src="js/app.js"></script>  
+  <script>
+    ons.ready(function() {
+    });
+  </script>
+    <!--///////////////////////////////////////////////////////////////////////////////////////////////////
+    //
+    //      Scripts
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////////////////--> 
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type='text/javascript' src='js/library/screenfull.js'></script> 
+
+    <script type='text/javascript' src='js/library/bootstrap.min.js'></script> 
+    
+  </script>
+
+ 
+</head>
+<body  ng-controller="GetDataDB" >
+    <div class=" text-center col-xs-12 encabezado">
+                <h4 class="title-content"></h4>
+                <div class="fullscreen" title="Pantalla completa"  ng-click="fullscreen()"><i class="material-icons">fullscreen</i></div>
+    </div>
+
+    <div class="fluid_container" >
+        <br>
+       <!-- <iframe src="http://docs.google.com/gview?url=http://www.empowerlabs.com/intellibanks/pub/EmpowerLabsBusinessSolutions/ProyectoMblocs/MB-PresentacionMetodologaAgil/presentacion_metodologia.pptx&embedded=true" style="width:100%; height:100%;" frameborder="0"></iframe>
+-->
+        <iframe src="http://docs.google.com/gview?url=http://www.empowerlabs.com/intellibanks/pub/EmpowerLabsBusinessSolutions/ProyectoMblocs/MB-PresentacionMetodologaAgil/presentacion_metodologia.pptx&embedded=true" style="width:100%; height:100%;" id="show-content" frameborder="0" class="screen-content"></iframe>
+
+    </div><!-- container -->
+
+
+<!--Botones para compartir y me gusta-->
+
+    <div class="str-content" style="padding-top: 76px;"  >
+            <div class="str-configuracion" style="display: block;">
+            <div class="head_configuracion"><div class="config-str"><div class="col-md-11" >
+                <div class="panel " style="border: 0px solid transparent !important; margin-right: 3%;">
+                    <div class="panel-heading text-alig-center content-share " data-toggle="modal" data-target="#myModal" >
+                        <i class="material-icons style-icon">share</i><div class="like">Compartir</div>
+                    </div>
+
+                    <div class="panel-heading text-alig-center content-like" ng-click="no_like()" DATA-VALUE="like" >
+                        <i class="material-icons style-icon like-conten">favorite_border</i><div class="like">No me gusta</div>
+                    </div>
+
+                    
+
+                </div>
+            </div></div></div>        
+
+              </div>
+    </div>
+
+
+
+
+
+
+<!--Contenido de la información-->
+    <div class="str-content" style="padding-top: 76px;padding-bottom: 80px;" >
+            <div class="str-configuracion" style="display: block;">
+            <div class="head_configuracion"><div class="config-str"><div class="col-md-12" >
+                <div class="panel panel-default">
+                    
+                    <div class="panel-body">
+                    <form class="form-horizontal">
+                        <fieldset>
+
+          
+                            <!-- Text  descrtiption-->
+                            <div class="form-group text-alig-center">
+                                
+                                <label class="col-md-12 description-content" for="textinput">Descripción de por que se subio la diapositiva</label>
+
+                            
+                              
+                            </div>
+
+
+                        </fieldset>
+                    </form></div>
+
+                    
+
+                </div>
+            </div></div></div>        
+
+              </div>
+    </div>
+
+
+
+
+
+
+<!--Comentario-->
+   <div class="str-content" >
+                     <div class="str-configuracion" style="display: block;">
+            <div class="head_configuracion"><div class="config-str"><div class="col-md-12" >
+                <div class="">
+          
+                            <div class=" fluid_container" style="width: 80%;">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+           <textarea placeholder="Añadir un comentario" class="mentions-input text-commit" id="commit-content"   ng-enter="doAction()" DATA-ACTION="commit"   title="Enter para andar tu comentario"></textarea>
+           <span class="label-message">Da enter para enviar tu comentario</span>
+        </div>
+        <div class="panel-body">
+        <form class="form-horizontal">
+            <fieldset>
+
+                <!-- Form Name -->
+
+
+                <!-- Search input-->
+                
+
+               
+            
+
+
+                <!-- Text input-->
+                <div class="form-group">
+                <div class="contact-str inyect-commit">
+                                      
+
+
+                </div>
+
+
+                </div>
+
+                      
+
+               
+
+                    
+
+            
+            </fieldset>
+        </form></div>
+
+        
+
+    </div>
+</div>
+                            
+                              
+                            </div>
+
+
+                            </div></div></div></div></div></div>
+
+
+                       
+
+
+
+
+
+
+
+
+
+    </div><!--fin content datra-->
+
+    <!--modal-->
+
+
+
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="exampleModalLabel">Comparte esta publicación</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="recipient-name" class="control-label">Correos:</label>
+             <textarea placeholder="Añade un correo" class="mentions-input text-commit" id="email-new"  ng-enter="doAction()" DATA-ACTION="email"></textarea>
+             <span class="label-message">Da enter para adjuntar el correo</span>
+             <span class="hide email-validate error">Correo invalido</span>
+
+           
+          </div>
+            
+
+        </form>
+
+
+
+
+
+      </div>
+
+    <div>
+            <div class="contact-str">
+                 <div class="form-group-email">
+                </div>
+     </div></div>
+ 
+
+
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-green" id="share-content" ng-click="share()">Compartir</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+    
+
+
+
+</body> 
+</html>

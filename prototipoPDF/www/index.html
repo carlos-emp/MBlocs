@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+	<head>
+		<meta charset="utf-8">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="mobile-web-app-capable" content="yes">
+		<title>Visor de PDF</title>
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+		<link rel="stylesheet" href="lib/onsen/css/onsenui.css">
+		<link rel="stylesheet" href="styles/onsen-css-components-blue-basic-theme.css">
+		<link rel="stylesheet" href="styles/app.css"/>
+
+		<link rel="stylesheet" href="./css/bootstrap.min.css">
+		<link rel="stylesheet" href="./css/index.css">
+		<link rel="stylesheet" href="./fonts/style.css">
+
+		<script src="lib/onsen/js/angular/angular.js"></script>
+		<script src="lib/onsen/js/onsenui.js"></script>
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+		<script src="js/jRate.min.js"></script>
+
+		<script src="cordova.js"></script>
+
+		<script type="text/javascript">
+			$(function() {
+				var that = this;
+				var toolitup = $(".calificar").jRate({
+					rating : 1,
+					startColor : 'orange',
+					endColor : 'yellow',
+					strokeColor : 'black',
+					width : 30,
+					height : 30,
+					precision : 0.5,
+					minSelected : 1,
+					onChange : function(rating) {
+						console.log("OnChange: Rating: " + rating);
+					},
+					onSet : function(rating) {
+						console.log("OnSet: Rating: " + rating);
+					}
+				});
+
+				var toolitup = $("#jRate-min").jRate({
+					rating : 1,
+					startColor : 'orange',
+					endColor : 'yellow',
+					strokeColor : 'black',
+					width : 30,
+					height : 30,
+					precision : 0.5,
+					minSelected : 1,
+					onChange : function(rating) {
+						console.log("OnChange: Rating: " + rating);
+					},
+					onSet : function(rating) {
+						console.log("OnSet: Rating: " + rating);
+					}
+				});
+
+				$('#btn-click').on('click', function() {
+					toolitup.setRating(0);
+				});
+
+			});
+		</script>
+
+		<script>
+			var module = angular.module('app', ['onsen']);
+		</script>
+
+		<style>
+			.page--menu-page__background {
+				background-color: #333;
+			}
+
+			.page--menu-page__content {
+				color: white;
+			}
+
+			.menu-close, .menu-close > .toolbar-button {
+				color: #999;
+			}
+
+			.menu-list, .menu-item:first-child, .menu-item:last-child, .menu-item {
+				background-color: transparent;
+				background-image: none !important;
+				border-color: transparent;
+				color: #fff;
+			}
+
+			.menu-item {
+				padding: 0 0 0 20px;
+				line-height: 52px;
+				height: 52px;
+				text-shadow: rgba(0, 0, 0, 0.4) 0px 1px 0px;
+			}
+
+			.menu-item:active {
+				background-color: rgba(255, 255, 255, 0.1);
+			}
+
+			.menu-notification {
+				display: inline-block;
+				margin-top: 12px;
+				font-size: 14px;
+				height: 16px;
+				line-height: 16px;
+				min-width: 16px;
+				font-weight: 600;
+			}
+
+			.bottom-menu-list, .bottom-menu-item:first-child, .bottom-menu-item:last-child, .bottom-menu-item {
+				border-color: #393939;
+				background-color: transparent;
+				background-image: none !important;
+				color: #ccc;
+			}
+
+			.bottom-menu-item:active {
+				background-color: rgba(255, 255, 255, 0.1);
+			}
+		</style>
+
+	</head>
+
+	<body>
+
+		<ons-sliding-menu
+		menu-page="menu.html" main-page="inicio.html" side="left"
+		var="menu" type="reveal" max-slide-distance="260px" swipeable="true"></ons-sliding-menu>
+
+		<ons-template id="menu.html">
+			<ons-page modifier="menu-page">
+				<ons-toolbar modifier="transparent"></ons-toolbar>
+
+				<ons-list class="menu-list">
+
+					<ons-list-item class="menu-item" ng-click="menu.setMainPage('inicio.html', {closeMenu: true})">
+						<ons-icon icon="fa-home" fixed-width="true"></ons-icon>
+						Inicio
+					</ons-list-item>
+
+					<ons-list-item class="menu-item  hidden-md hidden-lg" ng-click="menu.setMainPage('comentarios.html', {closeMenu: true})">
+						<ons-icon icon="fa-comment" fixed-width="true"></ons-icon>
+						Comentarios
+						<div class="notification menu-notification">
+							7
+						</div>
+					</ons-list-item>
+
+					<ons-list-item class="menu-item hidden-md hidden-lg" ng-click="menu.setMainPage('puntuar.html', {closeMenu: true})">
+						<ons-icon icon="fa-star" fixed-width="true"></ons-icon>
+						Puntuar
+					</ons-list-item>
+
+					<ons-list-item class="menu-item  hidden-md hidden-lg" ng-click="menu.setMainPage('compartir.html', {closeMenu: true})">
+						<ons-icon icon="fa-share" fixed-width="true"></ons-icon>
+						Compartir
+					</ons-list-item>
+
+				</ons-list>
+
+				<br>
+
+				<ons-list class="bottom-menu-list">
+					<ons-list-item class="bottom-menu-item" ng-click="menu.setMainPage('page2.html', {closeMenu: true})">
+						Settings
+						<div class="notification menu-notification">
+							3
+						</div>
+					</ons-list-item>
+
+					<ons-list-item class="bottom-menu-item" ng-click="menu.setMainPage('page1.html', {closeMenu: true})">
+						Help
+					</ons-list-item>
+
+					<ons-list-item class="bottom-menu-item" ng-click="menu.setMainPage('page2.html', {closeMenu: true})">
+						Send feedback
+					</ons-list-item>
+				</ons-list>
+			</ons-page>
+		</ons-template>
+
+		<ons-template id="inicio.html">
+			<ons-page>
+				<ons-toolbar>
+					<div class="left">
+						<ons-toolbar-button ng-click="menu.toggle()">
+							<ons-icon icon="ion-navicon" size="28px" fixed-width="false" class="colorBlanco"></ons-icon>
+						</ons-toolbar-button>
+					</div>
+					<div class="center colorBlanco">
+						Visor de PDF
+					</div>
+
+					<div class="right">
+						<div class="circulo fondoBlanco derecha margen-min" onclick="goFullscreen('frame');" title="Pantalla Completa">
+							<span class="icon-fullscreen colorAzulC "></span>
+						</div>
+					</div>
+
+				</ons-toolbar>
+
+				<div class="contenido">
+
+					<div class="col-xs-12 col-md-9">
+
+						<iframe src="http://docs.google.com/gview?url=http://proyectgoliath.files.wordpress.com/2012/01/anonymous-el-manual.pdf&embedded=true" frameborder="0" class="pdf" id="frame" allowFullScreen></iframe>
+
+					</div>
+
+					<div class="hidden-xs hidden-sm col-md-3">
+
+						<div class="row">
+
+							<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true" class="hidden-xs hidden-sm">
+								<div class="panel panel-default">
+									<div class="panel-heading " role="tab" id="headingOne">
+										<h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> <span class="icon-star"></span> Puntuar </a></h4>
+									</div>
+									<div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+										<div class="panel-body">
+
+											<div class="row">
+												<div class="col-md-offset-1 col-xs-8">
+													<div id="jRate" class="calificar"></div>
+												</div>
+												<div class="col-md-2">
+													<button class="btn btn-primary" id="btn-click">
+														x
+													</button>
+												</div>
+											</div>
+
+										</div>
+									</div>
+									<div class="panel panel-default">
+										<div class="panel-heading" role="tab" id="headingTwo">
+											<h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"> <span class="icon-share"></span> Compartir </a></h4>
+										</div>
+										<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+											<div class="panel-body">
+
+												<div class="row alineado">
+													<div class="col-md-4">
+														<div class="circulo fondoAzul">
+															<span class="icon-facebook"></span>
+														</div>
+													</div>
+
+													<div class="col-md-4">
+														<div class="circulo fondoAzulCielo">
+															<span class="icon-twitter"></span>
+														</div>
+													</div>
+
+													<div class="col-md-4">
+														<div class="circulo fondoRojo">
+															<span class="icon-google"></span>
+														</div>
+													</div>
+
+												</div>
+											</div>
+										</div>
+									</div>
+
+								</div>
+								<div class="barra" id="mensajes">
+
+								</div>
+								<div class="row">
+									<div class="col-xs-10">
+										<textarea class="form-control" name="" id=""  rows="2" placeholder="Escriba su comentario" draggable="false"></textarea>
+									</div>
+
+									<div class="col-xs-1">
+
+										<button class="btn btn-primary">
+											<span class="icon-send"></span>
+										</button>
+									</div>
+								</div>
+
+							</div>
+
+						</div>
+
+					</div>
+				</div>
+
+			</ons-page>
+
+		</ons-template>
+
+		<ons-template id="comentarios.html">
+			<ons-page>
+				<ons-toolbar>
+					<div class="left">
+						<ons-toolbar-button ng-click="menu.toggle()">
+							<ons-icon icon="ion-navicon" size="28px" fixed-width="false" class="colorBlanco"></ons-icon>
+						</ons-toolbar-button>
+					</div>
+					<div class="center colorBlanco">
+						Comentarios
+					</div>
+				</ons-toolbar>
+
+				<div class="container">
+
+					<div class="barra-min" id="mensajes-min"></div>
+
+					<div class="row fondoBlanco footer">
+						<div class="col-xs-10">
+							<textarea class="form-control" name="" id=""  rows="1" placeholder="Escriba su comentario" draggable="false"></textarea>
+						</div>
+
+						<div class="col-xs-1">
+
+							<button class="btn btn-primary">
+								<span class="icon-send"></span>
+							</button>
+						</div>
+					</div>
+
+				</div>
+
+			</ons-page>
+		</ons-template>
+
+		<ons-template id="puntuar.html">
+			<ons-page>
+				<ons-toolbar>
+					<div class="left">
+						<ons-toolbar-button ng-click="menu.toggle()">
+							<ons-icon icon="ion-navicon" size="28px" fixed-width="false" class="colorBlanco"></ons-icon>
+						</ons-toolbar-button>
+					</div>
+					<div class="center colorBlanco">
+						Calificar
+					</div>
+				</ons-toolbar>
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-offset-1 col-xs-7">
+							<div id="jRate-min" class="calificar"></div>
+						</div>
+						<div class="col-xs-2">
+							<button class="btn btn-primary" id="btn-click">
+								x
+							</button>
+						</div>
+					</div>
+
+				</div>
+
+			</ons-page>
+		</ons-template>
+
+		<ons-template id="compartir.html">
+			<ons-page>
+				<ons-toolbar>
+					<div class="left">
+						<ons-toolbar-button ng-click="menu.toggle()">
+							<ons-icon icon="ion-navicon" size="28px" fixed-width="false" class="colorBlanco"></ons-icon>
+						</ons-toolbar-button>
+					</div>
+					<div class="center colorBlanco">
+						Compartir
+					</div>
+				</ons-toolbar>
+				<div class="container contenido">
+
+					Comparta este documento en sus redes sociales
+					<br>
+					<div class="row alineado text-center colorBlanco">
+						<div class="col-xs-12">
+							<div class="fondoAzul">
+								<span class="icon-facebook"></span>
+							</div>
+						</div>
+
+						<div class="col-xs-12">
+							<div class="fondoAzulCielo">
+								<span class="icon-twitter"></span>
+							</div>
+						</div>
+
+						<div class="col-xs-12">
+							<div class="fondoRojo">
+								<span class="icon-google"></span>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+			</ons-page>
+		</ons-template>
+		<script src="./js/bootstrap.min.js"></script>
+		<script src="./js/pCompleta.js"></script>
+
+		<script>
+			$(document).ready(get_mensajes("#mensajes"));
+			$(document).ready(get_mensajes("#mensajes-min"));
+
+			function get_mensajes(id) {
+				var mensajes = "";
+				mensajes += " <div class='row margen-sup-min'>";
+				mensajes += "<div class='col-xs-2 '>";
+				mensajes += "<div class='circulo fondoAzulC'><span class='icon-person'></span></div>";
+				mensajes += "</div>";
+				mensajes += "<div class='col-xs-10'>";
+				mensajes += "<div class='fondoGris redondeado mensaje'>";
+				mensajes += "<b>Carlos Vázquez</b><br>";
+				mensajes += "Muy buena información.</div> </div></div> ";
+
+				mensajes += " <div class='row margen-sup-min'>";
+				mensajes += "<div class='col-xs-2 '>";
+				mensajes += "<div class='circulo fondoAzulC'><span class='icon-person'></span></div>";
+				mensajes += "</div>";
+				mensajes += "<div class='col-xs-10'>";
+				mensajes += "<div class='fondoGris redondeado mensaje'>";
+				mensajes += "<b>Araceli de la Rosa</b><br>";
+				mensajes += "Muy buena información.</div> </div></div> ";
+
+				mensajes += " <div class='row margen-sup-min'>";
+				mensajes += "<div class='col-xs-2 '>";
+				mensajes += "<div class='circulo fondoAzulC'><span class='icon-person'></span></div>";
+				mensajes += "</div>";
+				mensajes += "<div class='col-xs-10'>";
+				mensajes += "<div class='fondoGris redondeado mensaje'>";
+				mensajes += "<b>Alejandro Luna</b><br>";
+				mensajes += "Muy buena información.</div> </div></div> ";
+
+				mensajes += " <div class='row margen-sup-min'>";
+				mensajes += "<div class='col-xs-2 '>";
+				mensajes += "<div class='circulo fondoAzulC'><span class='icon-person'></span></div>";
+				mensajes += "</div>";
+				mensajes += "<div class='col-xs-10'>";
+				mensajes += "<div class='fondoGris redondeado mensaje'>";
+				mensajes += "<b>Carlos Vázquez</b><br>";
+				mensajes += "Muy buena información.</div> </div></div> ";
+
+				mensajes += " <div class='row margen-sup-min'>";
+				mensajes += "<div class='col-xs-2 '>";
+				mensajes += "<div class='circulo fondoAzulC'><span class='icon-person'></span></div>";
+				mensajes += "</div>";
+				mensajes += "<div class='col-xs-10'>";
+				mensajes += "<div class='fondoGris redondeado mensaje'>";
+				mensajes += "<b>Carlos Vázquez</b><br>";
+				mensajes += "Muy buena información.</div> </div></div> ";
+
+				mensajes += " <div class='row margen-sup-min'>";
+				mensajes += "<div class='col-xs-2 '>";
+				mensajes += "<div class='circulo fondoAzulC'><span class='icon-person'></span></div>";
+				mensajes += "</div>";
+				mensajes += "<div class='col-xs-10'>";
+				mensajes += "<div class='fondoGris redondeado mensaje'>";
+				mensajes += "<b>Carlos Vázquez</b><br>";
+				mensajes += "Muy buena información.</div> </div></div> ";
+
+				mensajes += " <div class='row margen-sup-min'>";
+				mensajes += "<div class='col-xs-2 '>";
+				mensajes += "<div class='circulo fondoAzulC'><span class='icon-person'></span></div>";
+				mensajes += "</div>";
+				mensajes += "<div class='col-xs-10'>";
+				mensajes += "<div class='fondoGris redondeado mensaje'>";
+				mensajes += "<b>Carlos Vázquez</b><br>";
+				mensajes += "Muy buena información.</div> </div></div> ";
+
+				$(id).append(mensajes);
+			}
+		</script>
+
+	</body>
+</html>

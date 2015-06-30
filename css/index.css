@@ -1,0 +1,340 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+* {
+	-webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+	-webkit-touch-callout: none; /* prevent callout to copy image, etc when tap to hold */
+	-webkit-text-size-adjust: none; /* prevent webkit from resizing text to fit */
+	-webkit-user-select: none; /* prevent copy paste, to allow, change 'none' to 'text' */
+	/* background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+	 background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+	 background-image:-ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+	 background-image:-webkit-gradient(
+	 linear,
+	 left top,
+	 left bottom,
+	 color-stop(0, #A7A7A7),
+	 color-stop(0.51, #E4E4E4)
+	 );*/
+	background-attachment: fixed;
+	font-family: 'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	/*text-transform:uppercase;*/
+	width: 100%;
+}
+
+.redondo {
+
+	-webkit-border-radius: 250px;
+	-moz-border-radius: 250px;
+	border-radius: 250px;
+}
+
+.derecha {
+	float: right;
+}
+
+.izquierda {
+	position: fixed;
+	float: left;
+}
+
+.fondo {
+	float: bottom;
+}
+
+.colorBlanco {
+	color: #fff;
+}
+
+.colorNegro {
+	color: #000;
+}
+
+.fondoRojo {
+	background-color: #d02929;
+}
+
+.fondoRojoC {
+	background-color: #f84d4d;
+}
+
+.fondoBlanco {
+	background-color: #fff;
+}
+.fondoGris {
+	background-color: #cccccc;
+}
+.fondoAzul {
+	background-color: #0866aa;
+}
+
+.fondoAzulC {
+	background-color: #0f70ad;
+}
+
+.fondoRojoF {
+	background-color: #c0392b
+}
+
+.fondoVerdeT {
+	background-color: #27ae60;
+}
+
+.fondoAzulCielo {
+	background-color: #08c6f6;
+}
+.fondoVerde {
+	background-color: #08aa51;
+}
+.fondoMorado {
+	background-color: #581cf1;
+}
+.fondoNaranja {
+	background-color: #ed5b07;
+}
+.fondoNegro {
+	background-color: #000;
+}
+
+.encabezado {
+
+	background-color: #d02929;
+	background-color: #0f70ad;
+	color: #fff;
+	height: 50px;
+	z-index: 9999;
+	position: fixed;
+}
+
+.vertical {
+	position: relative;
+	top: 10%;
+}
+
+.fila {
+	margin: 10px 0;
+}
+
+.redondeado {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+textarea:focus, input:focus, input[type]:focus, .uneditable-input:focus {
+	border-color: #d02929;
+	box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset, 0 0 8px rgba(229, 103, 23, 0.6);
+	outline: 0 none;
+}
+
+.margen {
+	padding: 10px;
+}
+
+.margen-inf {
+	margin-bottom: 40px;
+}
+.margen-sup {
+	margin-top: 40px;
+}
+.margen-sup-min {
+	margin-top: 10px;
+}
+
+.menu {
+	margin-top: 50px;
+}
+
+.inicial {
+	display: block;
+	width: 35px;
+	height: 35px;
+}
+.tarjeta {
+	background-color: #fff;
+	border: 1px solid rgba(0,0,0,0.2);
+}
+.contenido {
+	margin-top: 50px;
+}
+
+a {
+	color: #fff;
+}
+
+.circulo {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	color: #fff;
+	line-height: 30px;
+	text-align: center;
+}
+
+.circulo-big {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	color: #fff;
+	line-height: 40px;
+	font-size: 20px;
+	text-align: center;
+}
+
+.floatcontainer {
+	float: right;
+}
+
+.floatcontainerleft {
+	float: left;
+	margin-top: 10px;
+}
+
+.floatcontainerdown {
+	float: bottom;
+}
+
+.fixed {
+	z-index: 9999;
+	position: fixed;
+}
+
+.absolute {
+	position: absolute
+}
+
+.relative {
+	position: relative;
+}
+
+.transparente {
+	opacity: 0.4;
+}
+
+.bordeBlanco {
+	border: 1px solid #fff;
+}
+
+.pdf {
+	width: 100%;
+	height: 90vh;
+	overflow-y: hidden;
+}
+
+.popup {
+
+	z-index: 9999;
+	border-radius: 10px;
+}
+
+.popup-min {
+	width: 320px;
+	height: 180px;
+	max-height: 180px;
+	left: calc(50% - 160px);
+	top: calc(50% - 90px);
+	z-index: 9999;
+	border-radius: 10px;
+}
+
+.sinBorde {
+	border: 0;
+}
+
+#mensaje {
+	position: relative;
+	bottom: 0;
+	width: 100%;
+}
+
+#mensajes {
+	margin-bottom: 10px;
+}
+
+#footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	opacity: 0.7;
+}
+
+.centrado {
+	top: 20%;
+}
+
+.barra {
+
+	overflow-y: scroll;
+	overflow-x: hidden;
+	height: 75vh;
+	padding: 10px;
+}
+
+.barra-min {
+	overflow-y: scroll;
+	overflow-x: hidden;
+	height: 65vh;
+}
+
+.mensaje {
+	padding: 10px;
+}
+
+.main {
+	margin: 20px;
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+
+	background-color: #3498db;
+	color: #fff;
+}
+
+#documentos {
+	margin-bottom: 39px;
+	text-align: center;
+}
+
+ul {
+	text-align: center;
+}
+li {
+	display: inline-block; 
+
+}
+.dropdown-menu > li {
+	display: inline-block;
+	
+}
+.open > ul {
+	display: inline-flex !important;
+	
+}
+
+#logo{
+	margin-right:20px;
+	margin-left:3px;
+	margin-top:6px;
+}

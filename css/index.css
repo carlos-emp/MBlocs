@@ -40,8 +40,12 @@ body {
 	height: 100%;
 	margin: 0px;
 	padding: 0px;
-	/*text-transform:uppercase;*/
 	width: 100%;
+	background: url(../img/fondo.png) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
 .redondo {
@@ -116,6 +120,10 @@ body {
 }
 .fondoNegro {
 	background-color: #000;
+}
+
+.fondoAmarillo {
+	background-color: #FCC120;
 }
 
 .encabezado {
@@ -304,7 +312,7 @@ a {
 
 .main {
 	margin: 20px;
-	margin-top:60px;
+	margin-top: 60px;
 }
 
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
@@ -318,60 +326,72 @@ a {
 	text-align: center;
 }
 
-
-
-
 .nav-tabs > li, .nav-pills > li {
-    float:none;
-    display:inline-block;
-    *display:inline; /* ie7 fix */
-     zoom:1; /* hasLayout ie7 trigger */
+	float: none;
+	display: inline-block;
+	*display: inline; /* ie7 fix */
+	zoom: 1; /* hasLayout ie7 trigger */
 }
 
 .nav-tabs, .nav-pills {
-    text-align:center;
+	text-align: center;
 }
-
-
 
 .dropdown-menu > li {
 	display: inline-block;
-	
 }
 .open > ul {
 	display: inline-flex !important;
-	
 }
 
-#logo{
-	margin-right:5px;
-	margin-left:3px;
-	margin-top:6px;
+#logo {
+	margin-right: 5px;
+	margin-left: 3px;
+	margin-top: 6px;
 }
 
-.header{
-	position:fixed;
+.header {
+	position: fixed;
 	width: 100%;
-	top:0;
-	display:table;
-	padding:10px;
+	top: 0;
+	display: table;
+	padding: 10px;
 }
-
-
-<div>
-  <span><img src="blah.jpg" /></span>
-  <span>text text text</span>
-</div>
-
 
 .header > img {
-  vertical-align: middle;
-  display: table-cell;
+	vertical-align: middle;
+	display: table-cell;
+	float: left;
 }
 .header > span {
-  vertical-align: middle;
-  display: table-cell;
+	vertical-align: middle;
+	display: table-cell;
+	float: left;
+	margin-left: 10px;
+	top: 0;
+	margin-top: 0;
+	font-size: 16px;
 }
 
+.tile {
+	padding: 20px;
+}
+.icono {
+	font-size: 30px;
+}
 
+html{
+	background: url(../img/fondo.png) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
 
+.tab-content,.tab-pane{
+	background-color:transparent;
+}
+
+*{
+	background:transparent;
+}

@@ -8,14 +8,15 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 		<link rel="stylesheet" href="css/index.css" media="all" />
 		<link rel="stylesheet" href="fonts/style.css" media="all" />
+		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    	
 
 		<div class="fondoAzulC header">
 
 			<img src="img/logo.png" width="130px" alt="" />
-			<span>MBlocs</span>
-
+			<span class="colorBlanco"><b>MBlocs</b></span>
 
 		</div>
 	</head>
@@ -24,7 +25,6 @@
 		<div class="main">
 
 			<ul class="nav nav-tabs  navbar-fixed-bottom fondoAzulC">
-				<!-- <li><img src="img/logo.png" width="80px" height="23px" alt="" id="logo" /></li> -->
 				<li class="active">
 					<a data-toggle="tab" href="#home"><span class="hidden-xs">Inicio </span><span class="icon-home"></span></a>
 				</li>
@@ -70,9 +70,43 @@
 
 			<div class="tab-content">
 				<div id="home" class="tab-pane fade in active">
-					<h3>Section A</h3>
+					<h3>Bienvenido</h3>
 					<p>
-						Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui. Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth.
+						A la aplicación MBlocs
+
+						<div class="row metro-array colorBlanco" align="center">
+
+							<div class="col-xs-4 col-sm-3 fondoRojo tile metro-tile">
+								<span class="icon-file-pdf-o icono"></span><br>
+								PDF
+							</div>
+
+							<div class="col-xs-4 col-sm-3 fondoAzul tile metro-tile">
+								<span class="icon-file-word-o icono"></span><br>
+								Word
+							</div>
+
+							<div class="col-xs-4 col-sm-3 fondoVerdeT tile metro-tile">
+								<span class="icon-file-excel-o icono"></span><br>
+								Excel
+							</div>
+
+							<div class="col-xs-4 col-sm-3 fondoNaranja tile metro-tile">
+								<span class="icon-file-powerpoint-o icono"></span><br>
+								PowerPoint
+							</div>
+							
+							<div class="col-xs-4 col-sm-3 fondoMorado tile metro-tile">
+								<span class="icon-file-video-o icono"></span><br>
+								Videos
+							</div>
+							
+							<div class="col-xs-4 col-sm-3 fondoAmarillo tile metro-tile">
+								<span class="icon-comments icono"></span><br>
+								Mensajes
+							</div>
+
+						</div>
 					</p>
 				</div>
 				<div id="pdf" class="tab-pane fade">
@@ -119,5 +153,11 @@
 				</div>
 			</div>
 		</div>
+		
+		
+		
+		
+				<script src="js/tileJs.min.js" type="text/javascript"></script>
+
 	</body>
 </html>

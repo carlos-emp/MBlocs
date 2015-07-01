@@ -1,86 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Example of Bootstrap 3 Dynamic Tabs</title>
-<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-<link rel="stylesheet" href="css/index.css" media="all" />
-<link rel="stylesheet" href="fonts/style.css" media="all" />
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<head>
+		<meta charset="UTF-8">
+		<title>Example of Bootstrap 3 Dynamic Tabs</title>
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="css/index.css" media="all" />
+		<link rel="stylesheet" href="fonts/style.css" media="all" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
-</style>
-</head>
-<body>
-<div class="main">
-    <ul class="nav nav-tabs  navbar-fixed-bottom fondoAzulC">
-    	<li><img src="img/logo.png" width="80px" height="23px" alt="" id="logo" /></li>
-        <li class="active"><a data-toggle="tab" href="#home"><span class="hidden-xs">Inicio </span><span class="icon-home"></span></a></li>        
-        <li class="dropdown">
-            <a data-toggle="dropdown" class="dropdown-toggle" href="#"><span class="hidden-xs">Documentos </span><span class="icon-copy"></span>  <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-                
-                <li><a data-toggle="tab" href="#pdf"><span class="hidden-xs">Documentos PDF </span><span class="icon-file-pdf-o"></span></a></li>
-        		<li><a data-toggle="tab" href="#word"><span class="hidden-xs">Documentos Word </span><span class="icon-file-word-o"></span></a></li>
-        		<li><a data-toggle="tab" href="#excel"><span class="hidden-xs">Documentos Excel </span><span class="icon-file-excel-o"></span></a></li>
-        		<li><a data-toggle="tab" href="#powerpoint"><span class="hidden-xs">Documentos PowerPoint </span><span class="icon-file-powerpoint-o"></span></a></li>
-                
-            </ul>
-        </li>
-        
-        
-        <li><a data-toggle="tab" href="#video"><span class="hidden-xs">Videos </span><span class="icon-file-video-o"></span></a></li>
-        
-        
-        <li class="dropdown">
-            <a data-toggle="dropdown" class="dropdown-toggle" href="#"><span class="hidden-xs">Opciones </span><span class="icon-gear"></span>  <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-                <li><a data-toggle="tab" href="#dropdown1"><span>1</span></a></li>
-                <li><a data-toggle="tab" href="#dropdown2"><span>2</span></a></li>
-            </ul>
-        </li>
-        
-        
-    </ul>
-  
-      
-  
-    <div class="tab-content">
-        <div id="home" class="tab-pane fade in active">
-            <h3>Section A</h3>
-            <p>Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui. Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth.</p>
-        </div>
-        <div id="pdf" class="tab-pane fade">
-            <h3>Section B</h3>
-            <p>Vestibulum nec erat eu nulla rhoncus fringilla ut non neque. Vivamus nibh urna, ornare id gravida ut, mollis a magna. Aliquam porttitor condimentum nisi, eu viverra ipsum porta ut. Nam hendrerit bibendum turpis, sed molestie mi fermentum id. Aenean volutpat velit sem. Sed consequat ante in rutrum convallis. Nunc facilisis leo at faucibus adipiscing.</p>
-        </div>
-        <div id="word" class="tab-pane fade">
-            <h3>Section B</h3>
-            <p>Vestibulum nec erat eu nulla rhoncus fringilla ut non neque. Vivamus nibh urna, ornare id gravida ut, mollis a magna. Aliquam porttitor condimentum nisi, eu viverra ipsum porta ut. Nam hendrerit bibendum turpis, sed molestie mi fermentum id. Aenean volutpat velit sem. Sed consequat ante in rutrum convallis. Nunc facilisis leo at faucibus adipiscing.</p>
-        </div>
-        <div id="excel" class="tab-pane fade">
-            <h3>Section B</h3>
-            <p>Vestibulum nec erat eu nulla rhoncus fringilla ut non neque. Vivamus nibh urna, ornare id gravida ut, mollis a magna. Aliquam porttitor condimentum nisi, eu viverra ipsum porta ut. Nam hendrerit bibendum turpis, sed molestie mi fermentum id. Aenean volutpat velit sem. Sed consequat ante in rutrum convallis. Nunc facilisis leo at faucibus adipiscing.</p>
-        </div>
-        <div id="powerpoint" class="tab-pane fade">
-            <h3>Section B</h3>
-            <p>Vestibulum nec erat eu nulla rhoncus fringilla ut non neque. Vivamus nibh urna, ornare id gravida ut, mollis a magna. Aliquam porttitor condimentum nisi, eu viverra ipsum porta ut. Nam hendrerit bibendum turpis, sed molestie mi fermentum id. Aenean volutpat velit sem. Sed consequat ante in rutrum convallis. Nunc facilisis leo at faucibus adipiscing.</p>
-        </div>
-        <div id="video" class="tab-pane fade">
-            <h3>Section B</h3>
-            <p>Vestibulum nec erat eu nulla rhoncus fringilla ut non neque. Vivamus nibh urna, ornare id gravida ut, mollis a magna. Aliquam porttitor condimentum nisi, eu viverra ipsum porta ut. Nam hendrerit bibendum turpis, sed molestie mi fermentum id. Aenean volutpat velit sem. Sed consequat ante in rutrum convallis. Nunc facilisis leo at faucibus adipiscing.</p>
-        </div>
-        <div id="dropdown1" class="tab-pane fade">
-            <h3>Dropdown 1</h3>
-            <p>WInteger convallis, nulla in sollicitudin placerat, ligula enim auctor lectus, in mollis diam dolor at lorem. Sed bibendum nibh sit amet dictum feugiat. Vivamus arcu sem, cursus a feugiat ut, iaculis at erat. Donec vehicula at ligula vitae venenatis. Sed nunc nulla, vehicula non porttitor in, pharetra et dolor. Fusce nec velit velit. Pellentesque consectetur eros.</p>
-        </div>
-        <div id="dropdown2" class="tab-pane fade">
-            <h3>Dropdown 2</h3>
-            <p>Donec vel placerat quam, ut euismod risus. Sed a mi suscipit, elementum sem a, hendrerit velit. Donec at erat magna. Sed dignissim orci nec eleifend egestas. Donec eget mi consequat massa vestibulum laoreet. Mauris et ultrices nulla, malesuada volutpat ante. Fusce ut orci lorem. Donec molestie libero in tempus imperdiet. Cum sociis natoque penatibus et magnis.</p>
-        </div>
-    </div>
-</div>
-</body>
-</html>                                		
+		<div class="fondoAzulC header">
+
+			<img src="img/logo.png" width="130px" alt="" />
+			<span>MBlocs</span>
+
+
+		</div>
+	</head>
+	<body>
+
+		<div class="main">
+
+			<ul class="nav nav-tabs  navbar-fixed-bottom fondoAzulC">
+				<!-- <li><img src="img/logo.png" width="80px" height="23px" alt="" id="logo" /></li> -->
+				<li class="active">
+					<a data-toggle="tab" href="#home"><span class="hidden-xs">Inicio </span><span class="icon-home"></span></a>
+				</li>
+				<li class="dropdown">
+					<a data-toggle="dropdown" class="dropdown-toggle" href="#"><span class="hidden-xs">Documentos </span><span class="icon-copy"></span> <b class="caret"></b></a>
+					<ul class="dropdown-menu">
+
+						<li>
+							<a data-toggle="tab" href="#pdf"><span class="hidden-xs">PDF </span><span class="icon-file-pdf-o"></span></a>
+						</li>
+						<li>
+							<a data-toggle="tab" href="#word"><span class="hidden-xs">Word </span><span class="icon-file-word-o"></span></a>
+						</li>
+						<li>
+							<a data-toggle="tab" href="#excel"><span class="hidden-xs">Excel </span><span class="icon-file-excel-o"></span></a>
+						</li>
+						<li>
+							<a data-toggle="tab" href="#powerpoint"><span class="hidden-xs">PowerPoint </span><span class="icon-file-powerpoint-o"></span></a>
+						</li>
+
+					</ul>
+				</li>
+
+				<li>
+					<a data-toggle="tab" href="#video"><span class="hidden-xs">Videos </span><span class="icon-file-video-o"></span></a>
+				</li>
+
+				<li class="dropdown">
+					<a data-toggle="dropdown" class="dropdown-toggle" href="#"><span class="hidden-xs">Ajustes </span><span class="icon-gear"></span> <b class="caret"></b></a>
+					<ul class="dropdown-menu">
+
+						<li>
+							<a data-toggle="tab" href="#pdf"><span class="hidden-xs">PDF </span><span class="icon-file-pdf-o"></span></a>
+						</li>
+						<li>
+							<a data-toggle="tab" href="#word"><span class="hidden-xs">Word </span><span class="icon-file-word-o"></span></a>
+						</li>
+
+					</ul>
+				</li>
+
+			</ul>
+
+			<div class="tab-content">
+				<div id="home" class="tab-pane fade in active">
+					<h3>Section A</h3>
+					<p>
+						Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui. Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth.
+					</p>
+				</div>
+				<div id="pdf" class="tab-pane fade">
+					<h3>Section B</h3>
+					<p>
+						Vestibulum nec erat eu nulla rhoncus fringilla ut non neque. Vivamus nibh urna, ornare id gravida ut, mollis a magna. Aliquam porttitor condimentum nisi, eu viverra ipsum porta ut. Nam hendrerit bibendum turpis, sed molestie mi fermentum id. Aenean volutpat velit sem. Sed consequat ante in rutrum convallis. Nunc facilisis leo at faucibus adipiscing.
+					</p>
+				</div>
+				<div id="word" class="tab-pane fade">
+					<h3>Section B</h3>
+					<p>
+						Vestibulum nec erat eu nulla rhoncus fringilla ut non neque. Vivamus nibh urna, ornare id gravida ut, mollis a magna. Aliquam porttitor condimentum nisi, eu viverra ipsum porta ut. Nam hendrerit bibendum turpis, sed molestie mi fermentum id. Aenean volutpat velit sem. Sed consequat ante in rutrum convallis. Nunc facilisis leo at faucibus adipiscing.
+					</p>
+				</div>
+				<div id="excel" class="tab-pane fade">
+					<h3>Section B</h3>
+					<p>
+						Vestibulum nec erat eu nulla rhoncus fringilla ut non neque. Vivamus nibh urna, ornare id gravida ut, mollis a magna. Aliquam porttitor condimentum nisi, eu viverra ipsum porta ut. Nam hendrerit bibendum turpis, sed molestie mi fermentum id. Aenean volutpat velit sem. Sed consequat ante in rutrum convallis. Nunc facilisis leo at faucibus adipiscing.
+					</p>
+				</div>
+				<div id="powerpoint" class="tab-pane fade">
+					<h3>Section B</h3>
+					<p>
+						Vestibulum nec erat eu nulla rhoncus fringilla ut non neque. Vivamus nibh urna, ornare id gravida ut, mollis a magna. Aliquam porttitor condimentum nisi, eu viverra ipsum porta ut. Nam hendrerit bibendum turpis, sed molestie mi fermentum id. Aenean volutpat velit sem. Sed consequat ante in rutrum convallis. Nunc facilisis leo at faucibus adipiscing.
+					</p>
+				</div>
+				<div id="video" class="tab-pane fade">
+					<h3>Section B</h3>
+					<p>
+						Vestibulum nec erat eu nulla rhoncus fringilla ut non neque. Vivamus nibh urna, ornare id gravida ut, mollis a magna. Aliquam porttitor condimentum nisi, eu viverra ipsum porta ut. Nam hendrerit bibendum turpis, sed molestie mi fermentum id. Aenean volutpat velit sem. Sed consequat ante in rutrum convallis. Nunc facilisis leo at faucibus adipiscing.
+					</p>
+				</div>
+				<div id="dropdown1" class="tab-pane fade">
+					<h3>Dropdown 1</h3>
+					<p>
+						WInteger convallis, nulla in sollicitudin placerat, ligula enim auctor lectus, in mollis diam dolor at lorem. Sed bibendum nibh sit amet dictum feugiat. Vivamus arcu sem, cursus a feugiat ut, iaculis at erat. Donec vehicula at ligula vitae venenatis. Sed nunc nulla, vehicula non porttitor in, pharetra et dolor. Fusce nec velit velit. Pellentesque consectetur eros.
+					</p>
+				</div>
+				<div id="dropdown2" class="tab-pane fade">
+					<h3>Dropdown 2</h3>
+					<p>
+						Donec vel placerat quam, ut euismod risus. Sed a mi suscipit, elementum sem a, hendrerit velit. Donec at erat magna. Sed dignissim orci nec eleifend egestas. Donec eget mi consequat massa vestibulum laoreet. Mauris et ultrices nulla, malesuada volutpat ante. Fusce ut orci lorem. Donec molestie libero in tempus imperdiet. Cum sociis natoque penatibus et magnis.
+					</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

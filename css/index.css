@@ -304,6 +304,7 @@ a {
 
 .main {
 	margin: 20px;
+	margin-top:60px;
 }
 
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
@@ -317,13 +318,22 @@ a {
 	text-align: center;
 }
 
-ul {
-	text-align: center;
-}
-li {
-	display: inline-block; 
 
+
+
+.nav-tabs > li, .nav-pills > li {
+    float:none;
+    display:inline-block;
+    *display:inline; /* ie7 fix */
+     zoom:1; /* hasLayout ie7 trigger */
 }
+
+.nav-tabs, .nav-pills {
+    text-align:center;
+}
+
+
+
 .dropdown-menu > li {
 	display: inline-block;
 	
@@ -334,7 +344,34 @@ li {
 }
 
 #logo{
-	margin-right:20px;
+	margin-right:5px;
 	margin-left:3px;
 	margin-top:6px;
 }
+
+.header{
+	position:fixed;
+	width: 100%;
+	top:0;
+	display:table;
+	padding:10px;
+}
+
+
+<div>
+  <span><img src="blah.jpg" /></span>
+  <span>text text text</span>
+</div>
+
+
+.header > img {
+  vertical-align: middle;
+  display: table-cell;
+}
+.header > span {
+  vertical-align: middle;
+  display: table-cell;
+}
+
+
+
